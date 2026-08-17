@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Riwaaz — Rakhi Collection</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header class="navbar">
+  <div class="logo">
+    <span>✦</span> RIWAAZ
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#collection">Rakhi Collection</a>
+    <a href="#gifts">Gifts</a>
+    <a href="#about">About</a>
+  </nav>
+
+  <div class="nav-actions">
+    <button onclick="focusSearch()">⌕</button>
+    <button onclick="showCart()">🛍 <span id="cartCount">0</span></button>
+  </div>
+</header>
+
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+    <span class="eyebrow">RAKSHABANDHAN 2026</span>
+
+    <h1>
+      A thread of love,<br>
+      <em>a lifetime of memories.</em>
+    </h1>
+
+    <p>
+      Celebrate the beautiful bond between siblings with
+      our handcrafted Rakhi collection.
+    </p>
+
+    <a href="#collection" class="primary-btn">
+      Explore Collection →
+    </a>
+  </div>
+
+  <div class="hero-art">
+    <div class="mandala">✦</div>
+    <div class="rakhi-illustration">
+      <span>❈</span>
+    </div>
+  </div>
+
+</section>
+
+
+<section class="categories">
+
+  <div class="category active" onclick="filterProducts('all')">
+    <span>✦</span>
+    <p>All Rakhis</p>
+  </div>
+
+  <div class="category" onclick="filterProducts('classic')">
+    <span>◈</span>
+    <p>Classic</p>
+  </div>
+
+  <div class="category" onclick="filterProducts('premium')">
+    <span>♢</span>
+    <p>Premium</p>
+  </div>
+
+  <div class="category" onclick="filterProducts('kids')">
+    <span>♡</span>
+    <p>Kids</p>
+  </div>
+
+  <div class="category" onclick="filterProducts('combo')">
+    <span>❀</span>
+    <p>Rakhi Combos</p>
+  </div>
+
+</section>
+
+
+<section class="collection" id="collection">
+
+  <div class="section-heading">
+    <div>
+      <span class="eyebrow">OUR COLLECTION</span>
+      <h2>Made for your <em>brother.</em></h2>
+    </div>
+
+    <div class="search">
+      <input
+        id="searchInput"
+        type="text"
+        placeholder="Search rakhis..."
+        oninput="searchProducts()"
+      >
+      🔍
+    </div>
+  </div>
+
+
+  <div class="products" id="products">
+
+    <article class="product" data-category="premium">
+      <div class="product-image image-one">
+        <span class="tag">BESTSELLER</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">✦</div>
+      </div>
+
+      <div class="product-info">
+        <span>PREMIUM COLLECTION</span>
+        <h3>Royal Pearl Rakhi</h3>
+        <p>Elegant pearls with a handcrafted centerpiece.</p>
+        <div class="price-row">
+          <strong>₹499</strong>
+          <del>₹699</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product" data-category="classic">
+      <div class="product-image image-two">
+        <span class="tag">POPULAR</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">❈</div>
+      </div>
+
+      <div class="product-info">
+        <span>CLASSIC COLLECTION</span>
+        <h3>Traditional Kundan Rakhi</h3>
+        <p>Classic Indian craftsmanship with a modern finish.</p>
+        <div class="price-row">
+          <strong>₹349</strong>
+          <del>₹499</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product" data-category="kids">
+      <div class="product-image image-three">
+        <span class="tag">KIDS FAVOURITE</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">★</div>
+      </div>
+
+      <div class="product-info">
+        <span>KIDS COLLECTION</span>
+        <h3>Little Star Rakhi</h3>
+        <p>A colourful and playful Rakhi for little brothers.</p>
+        <div class="price-row">
+          <strong>₹249</strong>
+          <del>₹299</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product" data-category="combo">
+      <div class="product-image image-four">
+        <span class="tag">VALUE COMBO</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">❀</div>
+      </div>
+
+      <div class="product-info">
+        <span>GIFT COMBO</span>
+        <h3>Rakhi & Sweet Box</h3>
+        <p>A beautiful Rakhi paired with festive sweets.</p>
+        <div class="price-row">
+          <strong>₹799</strong>
+          <del>₹999</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product" data-category="premium">
+      <div class="product-image image-five">
+        <span class="tag">NEW</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">◆</div>
+      </div>
+
+      <div class="product-info">
+        <span>PREMIUM COLLECTION</span>
+        <h3>Royal Emerald Rakhi</h3>
+        <p>A statement Rakhi designed for a special celebration.</p>
+        <div class="price-row">
+          <strong>₹599</strong>
+          <del>₹799</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+
+    <article class="product" data-category="classic">
+      <div class="product-image image-six">
+        <span class="tag">HANDCRAFTED</span>
+        <button class="heart">♡</button>
+        <div class="rakhi-design">✧</div>
+      </div>
+
+      <div class="product-info">
+        <span>CLASSIC COLLECTION</span>
+        <h3>Divine Rudraksha Rakhi</h3>
+        <p>Simple, traditional and beautifully handcrafted.</p>
+        <div class="price-row">
+          <strong>₹299</strong>
+          <del>₹399</del>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="promise">
+
+  <div>
+    <span>01</span>
+    <h3>Handcrafted</h3>
+    <p>Designed with care for a celebration that feels personal.</p>
+  </div>
+
+  <div>
+    <span>02</span>
+    <h3>Festive Packaging</h3>
+    <p>Beautiful packaging made for gifting straight from the heart.</p>
+  </div>
+
+  <div>
+    <span>03</span>
+    <h3>Made to Celebrate</h3>
+    <p>Thoughtfully designed for the most special sibling bond.</p>
+  </div>
+
+</section>
+
+
+<footer id="about">
+
+  <div class="footer-logo">✦ RIWAAZ</div>
+
+  <p>
+    Celebrating the timeless bond of siblings,
+    one Rakhi at a time.
+  </p>
+
+  <div class="footer-bottom">
+    <span>© 2026 Riwaaz</span>
+    <span>Made with love for Rakshabandhan</span>
+  </div>
+
+</footer>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
